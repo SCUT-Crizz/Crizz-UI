@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Crizz-UI",
   description: "练手组件库",
-  base: "/crizz-ui/",
+  base: "/Crizz-UI/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
