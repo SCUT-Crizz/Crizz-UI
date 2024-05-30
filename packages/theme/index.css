@@ -1,0 +1,67 @@
+@import './reset.css';
+
+:root {
+  /* colors */
+  --cr-color-white: #ffffff;
+  --cr-color-black: #000000;
+  --colors: (primary: #409eff, success: #67c23a, warning: #e6a23c, danger: #f56c6c, info: #909399);
+  --cr-bg-color: #ffffff;
+  --cr-bg-color-page: #f2f3f5;
+  --cr-bg-color-overlay: #ffffff;
+  --cr-text-color-primary: #303133;
+  --cr-text-color-regular: #606266;
+  --cr-text-color-secondary: #909399;
+  --cr-text-color-placeholder: #a8abb2;
+  --cr-text-color-disabled: #c0c4cc;
+  --cr-border-color: #dcdfe6;
+  --cr-border-color-light: #e4e7ed;
+  --cr-border-color-lighter: #ebeef5;
+  --cr-border-color-extra-light: #f2f6fc;
+  --cr-border-color-dark: #d4d7de;
+  --cr-border-color-darker: #cdd0d6;
+  --cr-fill-color: #f0f2f5;
+  --cr-fill-color-light: #f5f7fa;
+  --cr-fill-color-lighter: #fafafa;
+  --cr-fill-color-extra-light: #fafcff;
+  --cr-fill-color-dark: #ebedf0;
+  --cr-fill-color-darker: #e6e8eb;
+  --cr-fill-color-blank: #ffffff;
+  
+  @each $val, $color in var(--colors) {
+    --cr-color-$(val): $(color);
+    @for $i from 3 to 9 {
+      --cr-color-$(val)-light-$(i): mix(#fff, $(color), 0.$(i));
+    }
+    --cr-color-$(val)-dark-2: mix(#000, $(color), 0.2);
+  }
+
+  /* border */
+  --cr-border-width: 1px;
+  --cr-border-style: solid;
+  --cr-border-color-hover: var(--cr-text-color-disabled);
+  --cr-border: var(--cr-border-width) var(--cr-border-style) var(--cr-border-color);
+  --cr-border-radius-base: 4px;
+  --cr-border-radius-small: 2px;
+  --cr-border-radius-round: 20px;
+  --cr-border-radius-circle: 100%;
+
+  /*font*/
+  --cr-font-size-extra-large: 20px;
+  --cr-font-size-large: 18px;
+  --cr-font-size-medium: 16px;
+  --cr-font-size-base: 14px;
+  --cr-font-size-small: 13px;
+  --cr-font-size-extra-small: 12px;
+  --cr-font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', '\5fae\8f6f\96c5\9ed1', Arial, sans-serif;
+  --cr-font-weight-primary: 500;
+
+  /*disabled*/
+  --cr-disabled-bg-color: var(--cr-fill-color-light);
+  --cr-disabled-text-color: var(--cr-text-color-placeholder);
+  --cr-disabled-border-color: var(--cr-border-color-light);
+
+  /*animation*/
+  --cr-transition-duration: 0.4s;
+  --cr-transition-duration-fast: 0.2s;
+}
