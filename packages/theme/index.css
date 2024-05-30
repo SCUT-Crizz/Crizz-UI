@@ -33,7 +33,7 @@
   --cr-fill-color-darker: #e6e8eb;
   --cr-fill-color-blank: #ffffff;
 
-  @each ($val, $color) in var(--colors) {
+  @each $val, $color in var(--colors) {
     --cr-color-$(val): $(color);
     @for $i from 3 to 9 {
       --cr-color-$(val)-light-$(i): mix(#fff, $(color), 0$ (i));
