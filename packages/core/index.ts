@@ -7,5 +7,5 @@ import '@crizz-ui/theme/index.css'
 library.add(fas)
 const installer = makeInstaller(components)
 
-export * from '@crizz-ui/components'
+export * from '../components'
 export default installer
