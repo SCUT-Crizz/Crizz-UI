@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "pnpm --filter @crizz-ui/play dev",
-    "story": "pnpm --filter @crizz-ui/play storybook",
+    "story": "run-s build story-only",
+    "story-only": "pnpm --filter @crizz-ui/play storybook",
     "docs:dev": "pnpm --filter @crizz-ui/docs dev",
     "docs:build": "pnpm --filter @crizz-ui/docs build",
     "test": "pnpm --filter @crizz-ui/components test",
