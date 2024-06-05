@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from "@storybook/vue3";
-import { CrCollapse, CrCollapseItem } from "crizz-ui";
 import 'crizz-ui/dist/index.css'
+
+import { CrCollapse, CrCollapseItem } from "crizz-ui";
+import 'crizz-ui/dist/theme/Collapse.css'
 
 type Story = StoryObj<typeof CrCollapse>;
 

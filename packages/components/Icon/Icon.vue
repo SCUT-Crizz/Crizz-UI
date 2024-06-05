@@ -26,6 +26,6 @@ const customStyles = computed(() => ({ color: props.color ?? void 0 }))
   </i>
 </template>
 
-<style>
+<style scoped>
 @import './style.css';
 </style>

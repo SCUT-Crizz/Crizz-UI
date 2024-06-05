@@ -1,7 +1,9 @@
 import type { Meta, StoryObj, ArgTypes } from '@storybook/vue3'
 import { fn, within, userEvent, expect, clearAllMocks } from '@storybook/test'
-import { CrButton, CrButtonGroup } from 'crizz-ui'
 import { set } from 'lodash-es'
+
+import { CrButton, CrButtonGroup } from 'crizz-ui'
+import 'crizz-ui/dist/theme/Button.css'
 
 type Story = StoryObj<typeof CrButton> & { argTypes?: ArgTypes }
 
