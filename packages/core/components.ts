@@ -3,7 +3,8 @@ import {
   CrButtonGroup,
   CrIcon,
   CrCollapse,
-  CrCollapseItem
+  CrCollapseItem,
+  CrAlert
 } from '@crizz-ui/components'
 import type { Plugin } from 'vue'
 
@@ -12,5 +13,6 @@ export default [
   CrButtonGroup,
   CrIcon,
   CrCollapse,
-  CrCollapseItem
+  CrCollapseItem,
+  CrAlert
 ] as Plugin[]
