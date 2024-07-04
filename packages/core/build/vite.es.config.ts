@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite'
 import { resolve } from 'path'
-import { readdirSync } from 'fs'
-import { map, filter, delay } from 'lodash-es'
+import { readdirSync, readdir } from 'fs'
+import { map, filter, delay, defer } from 'lodash-es'
 
 import shell from 'shelljs'
 import dts from 'vite-plugin-dts'
@@ -25,12 +25,10 @@ function getDirectoriesSync(basePath: string) {
 }
 
 function moveStyles() {
-  try {
-    readdirSync('./dist/es/theme')
-    shell.mv('./dist/es/theme', './dist')
-  } catch (_) {
-    delay(moveStyles, TRY_MOVE_STYLES_DELAY)
-  }
+  readdir('./dist/es/theme', (err) => {
+    if (err) return delay(moveStyles, TRY_MOVE_STYLES_DELAY)
+    defer(() => shell.mv('./dist/es/theme', './dist'))
+  })
 }
 
 export default defineConfig({
@@ -77,7 +75,7 @@ export default defineConfig({
     minify: false,
     cssCodeSplit: true,
     lib: {
-      entry: resolve(__dirname, './index.ts'),
+      entry: resolve(__dirname, '../index.ts'),
       name: 'CrizzUI',
       fileName: 'index',
       formats: ['es']
