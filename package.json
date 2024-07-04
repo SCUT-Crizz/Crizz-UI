@@ -45,6 +45,7 @@
     "@crizz-ui/hooks": "workspace:*",
     "@crizz-ui/theme": "workspace:*",
     "@crizz-ui/utils": "workspace:*",
+    "@vitepress-preview/component": "workspace:*",
     "crizz-ui": "workspace:*",
     "lodash-es": "^4.17.21",
     "vue": "^3.4.19"

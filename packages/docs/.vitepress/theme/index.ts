@@ -1,7 +1,7 @@
 import DefaultTheme from 'vitepress/theme'
 import { type App } from 'vue'
 import CrizzUI from 'crizz-ui'
-import { ElementPlusContainer } from 'vitepress-preview-component'
+import { ElementPlusContainer } from '@vitepress-preview/component'
 
 import '@vitepress-preview/component/style.css'
 import 'crizz-ui/dist/index.css'
